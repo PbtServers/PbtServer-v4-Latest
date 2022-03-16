@@ -23,9 +23,9 @@ index 889aa2d4fbdd85db00c6d711181cb1832fd9daa5..2f9bef70be115c09a22594f704841b70
              "Implementation-Title" to "CraftBukkit",
              "Implementation-Version" to "git-Paper-$implementationVersion",
 -            "Implementation-Version" to "git-Airplane-$implementationVersion", // Airplane
-+            "Implementation-Version" to "git-Pufferfish-$implementationVersion", // Airplane // Pufferfish
++            "Implementation-Version" to "git-PbtServer-$implementationVersion", // Airplane // Pufferfish // PbtServer
              "Implementation-Vendor" to date, // Paper
-             "Specification-Title" to "Bukkit",
+             "Specification-Title" to "PbtServer",
              "Specification-Version" to project.version,
 diff --git a/src/main/java/com/destroystokyo/paper/Metrics.java b/src/main/java/com/destroystokyo/paper/Metrics.java
 index f5d01bce4d5547b4aeca96b7962b2090f47ea541..81ca70330d1b7aacdad00a212fbb239765e78cd7 100644
@@ -36,7 +36,7 @@ index f5d01bce4d5547b4aeca96b7962b2090f47ea541..81ca70330d1b7aacdad00a212fbb2397
              // Only start Metrics, if it's enabled in the config
              if (config.getBoolean("enabled", true)) {
 -                Metrics metrics = new Metrics("Airplane", serverUUID, logFailedRequests, Bukkit.getLogger()); // Tuinity - we have our own bstats page // Airplane
-+                Metrics metrics = new Metrics("Pufferfish", serverUUID, logFailedRequests, Bukkit.getLogger()); // Tuinity - we have our own bstats page // Airplane // Pufferfish
++                Metrics metrics = new Metrics("PbtServer", serverUUID, logFailedRequests, Bukkit.getLogger()); // Tuinity - we have our own bstats page // Airplane // Pufferfish // PbtServer
  
                  metrics.addCustomChart(new Metrics.SimplePie("minecraft_version", () -> {
                      String minecraftVersion = Bukkit.getVersion();
@@ -64,7 +64,7 @@ index 7120a77ec93009faf1f18fd6c9bc020de66a5f73..8944f3ed83e2b9b083374992fb9bf63c
      @DontObfuscate
      public String getServerModName() {
 -        return "Airplane"; // Airplane // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
-+        return "Pufferfish"; // Pufferfish // Airplane // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
++        return "PbtServer"; // PbtServer // Pufferfish // Airplane // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
      }
  
      public SystemReport fillSystemReport(SystemReport details) {
@@ -77,7 +77,7 @@ index c3a256d0ccb9fb44a5a1f9ffa2d48542ef4e857b..329a5cd5a9b73ef9bebea6765deb4e63
  
  public final class CraftServer implements Server {
 -    private final String serverName = "Airplane"; // Paper // Airplane
-+    private final String serverName = "Pufferfish"; // Paper // Airplane // Pufferfish
++    private final String serverName = "PbtServer"; // Paper // Airplane // Pufferfish // PbtServer
      private final String serverVersion;
      private final String bukkitVersion = Versioning.getBukkitVersion();
      private final Logger logger = Logger.getLogger("Minecraft");
@@ -87,7 +87,7 @@ index 1788d79ea489e446d3d9f541693d4ba3dfc26015..a56765ac2fd152426df87598bb94c021
 +++ b/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
 @@ -11,7 +11,7 @@ public final class Versioning {
      public static String getBukkitVersion() {
-         String result = "Unknown-Version";
+         String result = "Desconocido";
  
 -        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/gg.airplane/airplane-api/pom.properties"); // Tuinity // Airplane
 +        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/gg.pufferfish.pufferfish/pufferfish-api/pom.properties"); // Tuinity // Airplane // Pufferfish
