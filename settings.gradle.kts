@@ -5,5 +5,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "pufferfish"
+rootProject.name = "PbtServer-v4-Latest"
 include("pufferfish-api", "pufferfish-server")
