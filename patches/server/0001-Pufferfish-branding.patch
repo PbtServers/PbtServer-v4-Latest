@@ -87,7 +87,7 @@ index 1788d79ea489e446d3d9f541693d4ba3dfc26015..a56765ac2fd152426df87598bb94c021
 +++ b/src/main/java/org/bukkit/craftbukkit/util/Versioning.java
 @@ -11,7 +11,7 @@ public final class Versioning {
      public static String getBukkitVersion() {
-         String result = "Desconocido";
+         String result = "Unknown-Version";
  
 -        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/gg.airplane/airplane-api/pom.properties"); // Tuinity // Airplane
 +        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/gg.pufferfish.pufferfish/pufferfish-api/pom.properties"); // Tuinity // Airplane // Pufferfish
