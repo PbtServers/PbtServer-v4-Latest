@@ -25,7 +25,7 @@ index 889aa2d4fbdd85db00c6d711181cb1832fd9daa5..2f9bef70be115c09a22594f704841b70
 -            "Implementation-Version" to "git-Airplane-$implementationVersion", // Airplane
 +            "Implementation-Version" to "git-PbtServer-$implementationVersion", // Airplane // Pufferfish // PbtServer
              "Implementation-Vendor" to date, // Paper
-             "Specification-Title" to "PbtServer",
+             "Specification-Title" to "Bukkit",
              "Specification-Version" to project.version,
 diff --git a/src/main/java/com/destroystokyo/paper/Metrics.java b/src/main/java/com/destroystokyo/paper/Metrics.java
 index f5d01bce4d5547b4aeca96b7962b2090f47ea541..81ca70330d1b7aacdad00a212fbb239765e78cd7 100644
